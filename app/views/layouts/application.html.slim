@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    meta charset="UTF-8"
+    meta content="IE=edge" http-equiv="X-UA-Compatible"
+    meta content="width=device-width, initial-scale=1" name="viewport"
+
+    title Rukoo: Your Online Shope Solution
+    meta content="Rukoo description here" name="description"
+    meta content="marketplace, easy digital download, digital product, digital, html5" name="keywords"
+
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+    /! inject:css
+    link href="/template/css/animate.css" rel="stylesheet"
+    link href="/template/css/font-awesome.min.css" rel="stylesheet"
+    link href="/template/css/fontello.css" rel="stylesheet"
+    link href="/template/css/jquery-ui.css" rel="stylesheet"
+    link href="/template/css/lnr-icon.css" rel="stylesheet"
+    link href="/template/css/owl.carousel.css" rel="stylesheet"
+    link href="/template/css/slick.css" rel="stylesheet"
+    link href="/template/css/trumbowyg.min.css" rel="stylesheet"
+    link href="/template/css/bootstrap/bootstrap.min.css" rel="stylesheet"
+    link href="/template/style.css" rel="stylesheet"
+    /! endinject
+
+    /! Favicon
+    link href="/template/images/favicon.png" rel="icon" sizes="16x16" type="image/png"
+
+  body
+    = yield
+
+    / script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0C5etf1GVmL_ldVAichWwFFVcDfa1y_c"
+    / script src="/template/js/map.js"
+    script src="/template/js/vendor/jquery/jquery-1.12.3.js"
+    script src="/template/js/vendor/jquery/popper.min.js"
+    script src="/template/js/vendor/jquery/uikit.min.js"
+    script src="/template/js/vendor/bootstrap.min.js"
+    script src="/template/js/vendor/chart.bundle.min.js"
+    script src="/template/js/vendor/grid.min.js"
+    script src="/template/js/vendor/jquery-ui.min.js"
+    script src="/template/js/vendor/jquery.barrating.min.js"
+    script src="/template/js/vendor/jquery.countdown.min.js"
+    script src="/template/js/vendor/jquery.counterup.min.js"
+    script src="/template/js/vendor/jquery.easing1.3.js"
+    script src="/template/js/vendor/owl.carousel.min.js"
+    script src="/template/js/vendor/slick.min.js"
+    script src="/template/js/vendor/tether.min.js"
+    script src="/template/js/vendor/trumbowyg.min.js"
+    script src="/template/js/vendor/waypoints.min.js"
+    script src="/template/js/dashboard.js"
+    script src="/template/js/main.js"
