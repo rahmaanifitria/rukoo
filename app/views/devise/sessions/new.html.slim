@@ -1,0 +1,54 @@
+section.breadcrumb-area
+  .container
+    .row
+      .col-md-12
+        .breadcrumb
+          ul
+            li
+              = link_to "Halaman Utama", root_path
+            li.active
+              = link_to " Masuk", new_session_path(@user)
+        h1.page-title Masuk
+
+section.login_area.section--padding2
+  .container
+    .row
+      .col-lg-6.offset-lg-3
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .cardify.login
+            .login--header
+              h3 Welcome Back
+              p You can sign in with your username
+            /! end .login_header
+            .login--form
+              .form-group.field
+                = f.label :email
+                = f.email_field :email, autofocus: true, placeholder: "Enter your email address", id: "email", class:"text_field"
+              .form-group.field
+                = f.label :email
+                = f.password_field :password, autocomplete: "current-password"
+              .form-group
+                .custom_checkbox
+                  - if devise_mapping.rememberable?
+                    .field
+                      = f.check_box :remember_me
+                      = f.label :remember_me
+
+                  input#ch2 type="checkbox" /
+                  label for="ch2"
+                    span.shadow_checkbox
+                    span.label_text Remember me
+              = f.submit "Masuk", class: "btn btn--md btn--round"
+              .login_assist
+                p.recover
+                  = render "devise/shared/links"
+
+            /! end .login--form
+          /! end .cardify
+      /! end .col-md-6
+    /! end .row
+  /! end .container
+/!
+  | \================================
+  | END LOGIN AREA
+  | \=================================

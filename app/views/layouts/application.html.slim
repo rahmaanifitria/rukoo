@@ -5,7 +5,7 @@ html
     meta content="IE=edge" http-equiv="X-UA-Compatible"
     meta content="width=device-width, initial-scale=1" name="viewport"
 
-    title Rukoo: Your Online Shope Solution
+    title Rukoo: Your Online Shop Solution
     meta content="Rukoo description here" name="description"
     meta content="marketplace, easy digital download, digital product, digital, html5" name="keywords"
 
@@ -31,8 +31,10 @@ html
     /! Favicon
     link href="/template/images/favicon.png" rel="icon" sizes="16x16" type="image/png"
 
-  body
+  body.preload.home1.mutlti-vendor
+    = render "shared/header-menu"
     = yield
+    = render "shared/footer-menu"
 
     / script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0C5etf1GVmL_ldVAichWwFFVcDfa1y_c"
     / script src="/template/js/map.js"

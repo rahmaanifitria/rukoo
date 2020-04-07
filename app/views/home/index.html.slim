@@ -1,1134 +1,755 @@
-body.preload.home1.mutlti-vendor
-  /!
-    | \================================
-    | START MENU AREA
-    | \=================================
-  /! start menu-area
-  .menu-area
-    /! start .top-menu-area
-    .top-menu-area
+/!
+  | \================================
+  | START HERO AREA
+  | \=================================
+section.hero-area.bgimage
+  .bg_image_holder
+    = image_tag 'hero_area_bg1.jpg', alt: 'background-image'
+  /! start hero-content
+  .hero-content.content_above
+    /! start .contact_wrapper
+    .content-wrapper
       /! start .container
       .container
-        /! start .row
+        /! start row
         .row
-          /! start .col-md-3
-          .col-lg-3.col-md-3.col-6.v_middle
-            .logo
-              = link_to home_index_path do
-                = image_tag 'logo.png', alt: 'Rukoo', :class=>"img-fluid"
-
-          /! end /.col-md-3
-          /! start .col-md-5
-          .col-lg-8.offset-lg-1.col-md-9.col-6.v_middle
-            /! start .author-area
-            .author-area
-              a.author-area__seller-btn.inline href="signup.html" Become a Seller
-              .author__notification_area
-                ul
-                  li.has_dropdown
-                    .icon_wrap
-                      span.lnr.lnr-alarm
-                      span.notification_count.noti 25
-                    .dropdowns.notification--dropdown
-                      .dropdown_module_header
-                        h4 My Notifications
-                        a href="notification.html"  View All
-                      .notifications_module
-                        .notification
-                          .notification__info
-                            .info_avatar
-                              = image_tag 'notification_head.png', alt: ''
-                            .info
-                              p
-                                span Anderson
-                                | added to Favourite
-                                a href="#"  Mccarther Coffee Shop
-                              p.time Just now
-                          /! end /.notifications
-                          .notification__icons
-                            span.lnr.lnr-heart.loved.noti_icon
-                          /! end /.notifications
-                        /! end /.notifications
-                        .notification
-                          .notification__info
-                            .info_avatar
-                              = image_tag 'notification_head2.png', alt: ''
-                            .info
-                              p
-                                span Michael
-                                | commented on
-                                a href="#"  MartPlace Extension Bundle
-                              p.time Just now
-                          /! end /.notifications
-                          .notification__icons
-                            span.lnr.lnr-bubble.commented.noti_icon
-                          /! end /.notifications
-                        /! end /.notifications
-
-                  li.has_dropdown
-                    .icon_wrap
-                      span.lnr.lnr-envelope
-                      span.notification_count.msg 6
-                    .dropdowns.messaging--dropdown
-                      .dropdown_module_header
-                        h4 My Messages
-                        a href="message.html"  View All
-                      .messages
-                        a.message.recent href="message.html"
-                          .message__actions_avatar
-                            .avatar
-                              = image_tag 'notification_head4.png', alt: ''
-                          /! end /.actions
-                          .message_data
-                            .name_time
-                              .name
-                                p NukeThemes
-                                span.lnr.lnr-envelope
-                              span.time Just now
-                              p Hello John Smith! Nunc placerat mi ...
-                          /! end /.message_data
-                          /! end /.message
-
-
-                  li.has_dropdown
-                    .icon_wrap
-                      span.lnr.lnr-cart
-                      span.notification_count.purch 2
-                    .dropdowns.dropdown--cart
-                      .cart_area
-                        .cart_product
-                          .product__info
-                            .thumbn
-                              = image_tag 'capro1.jpg', alt: 'cart product thumbnail'
-                            .info
-                              a.title href="single-product.html"  Finance and Consulting Business Theme
-                              .cat
-                                a href="#"
-                                  = image_tag 'catword.png', alt: ''
-                                  | Wordpress
-                          .product__action
-                            a href="#"
-                              span.lnr.lnr-trash
-                            p $60
-                        .cart_product
-                          .product__info
-                            .thumbn
-                              = image_tag 'capro2.jpg', alt: 'cart product thumbnail'
-                            .info
-                              a.title href="single-product.html"  Flounce - Multipurpose OpenCart Theme
-                              .cat
-                                a href="#"
-                                  = image_tag 'catword.png', alt: ''
-                                  | Wordpress
-                          .product__action
-                            a href="#"
-                              span.lnr.lnr-trash
-                            p $60
-                        .total
-                          p
-                            span> Total :
-                            | $80
-                        .cart_action
-                          a.go_cart href="cart.html"  View Cart
-                          a.go_checkout href="checkout.html"  Checkout
-              /! start .author__notification_area
-              /! start .author-author__info
-              .author-author__info.inline.has_dropdown
-                .author__avatar
-                  = image_tag 'usr_avatar.png', alt: 'User'
-                .autor__info
-                  p.name
-                    | Jhon Doe
-                  p.ammount $20.45
-                .dropdowns.dropdown--author
-                  ul
-                    li
-                      a href="author.html"
-                        span.lnr.lnr-user
-                        | Profile
-                    li
-                      a href="dashboard.html"
-                        span.lnr.lnr-home
-                        | Dashboard
-                    li
-                      a href="dashboard-setting.html"
-                        span.lnr.lnr-cog
-                        | Setting
-                    li
-                      a href="cart.html"
-                        span.lnr.lnr-cart
-                        | Purchases
-                    li
-                      a href="favourites.html"
-                        span.lnr.lnr-heart
-                        | Favourite
-                    li
-                      a href="dashboard-add-credit.html"
-                        span.lnr.lnr-dice
-                        | Add Credits
-                    li
-                      a href="dashboard-statement.html"
-                        span.lnr.lnr-chart-bars
-                        | Sale Statement
-                    li
-                      a href="dashboard-upload.html"
-                        span.lnr.lnr-upload
-                        | Upload Item
-                    li
-                      a href="dashboard-manage-item.html"
-                        span.lnr.lnr-book
-                        | Manage Item
-                    li
-                      a href="dashboard-withdrawal.html"
-                        span.lnr.lnr-briefcase
-                        | Withdrawals
-                    li
-                      a href="#"
-                        span.lnr.lnr-exit
-                        | Logout
-              /! end /.author-author__info
-            /! end .author-area
-            /! author area restructured for mobile
-            .mobile_content
-              span.lnr.lnr-user.menu_icon
-              /! offcanvas menu
-              .offcanvas-menu.closed
-                span.lnr.lnr-cross.close_menu
-                .author-author__info
-                  .author__avatar.v_middle
-                    # img alt=("user avatar") src="usr_avatar.png" /
-                    = image_tag 'usr_avatar.png', alt: 'user avatar'
-                  .autor__info.v_middle
-                    p.name
-                      | Jhon Doe
-                    p.ammount $20.45
-                /! end /.author-author__info
-                .author__notification_area
-                  ul
-                    li
-                      a href="notification.html"
-                      .icon_wrap
-                        span.lnr.lnr-alarm
-                        span.notification_count.noti 25
-                    li
-                      a href="message.html"
-                      .icon_wrap
-                        span.lnr.lnr-envelope
-                        span.notification_count.msg 6
-                    li
-                      a href="cart.html"
-                      .icon_wrap
-                        span.lnr.lnr-cart
-                        span.notification_count.purch 2
-                /! start .author__notification_area
-                .dropdowns.dropdown--author
-                  ul
-                    li
-                      a href="author.html"
-                        span.lnr.lnr-user
-                        | Profile
-                    li
-                      a href="dashboard.html"
-                        span.lnr.lnr-home
-                        | Dashboard
-                    li
-                      a href="dashboard-setting.html"
-                        span.lnr.lnr-cog
-                        | Setting
-                    li
-                      a href="cart.html"
-                        span.lnr.lnr-cart
-                        | Purchases
-                    li
-                      a href="favourites.html"
-                        span.lnr.lnr-heart
-                        | Favourite
-                    li
-                      a href="dashboard-add-credit.html"
-                        span.lnr.lnr-dice
-                        | Add Credits
-                    li
-                      a href="dashboard-statement.html"
-                        span.lnr.lnr-chart-bars
-                        | Sale Statement
-                    li
-                      a href="dashboard-upload.html"
-                        span.lnr.lnr-upload
-                        | Upload Item
-                    li
-                      a href="dashboard-manage-item.html"
-                        span.lnr.lnr-book
-                        | Manage Item
-                    li
-                      a href="dashboard-withdrawal.html"
-                        span.lnr.lnr-briefcase
-                        | Withdrawals
-                    li
-                      a href="#"
-                        span.lnr.lnr-exit
-                        | Logout
-                .text-center
-                  a.author-area__seller-btn.inline href="signup.html"  Become a Seller
-            /! end /.mobile_content
-          /! end /.col-md-5
-        /! end /.row
-      /! end /.container
-    /! end
-    /! start .mainmenu_area
-    .mainmenu
-      /! start .container
-      .container
-        /! start .row
-        .row
-          /! start .col-md-12
+          /! start col-md-12
           .col-md-12
-            .navbar-header
-              /! start mainmenu__search
-              .mainmenu__search
-                form action="#"
-                  .searc-wrap
-                    input placeholder=("Search product") type="text" /
-                    button.search-wrap__btn type="submit"
-                      span.lnr.lnr-magnifier
-              /! start mainmenu__search
-            nav.navbar.navbar-expand-md.navbar-light.mainmenu__menu
-              button.navbar-toggler aria-controls="navbarNav" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarNav" data-toggle="collapse" type="button"
-                span.navbar-toggler-icon
-              /! Collect the nav links, forms, and other content for toggling
-              #navbarNav.collapse.navbar-collapse
-                ul.navbar-nav
-                  li.has_dropdown
-                    a href="index.html"  HOME
-                    .dropdowns.dropdown--menu
-                      ul
-                        li
-                          a href="index.html"  Home Multi Vendor
-                        li
-                          a href="index-single.html"  Home Two Single User
-                        li
-                          a href="index3.html"  Home Three Product
-                  li.has_dropdown
-                    a href="all-products-list.html"  all product
-                    .dropdowns.dropdown--menu
-                      ul
-                        li
-                          a href="all-products.html"  Recent Items
-                        li
-                          a href="all-products.html"  Popular Items
-                        li
-                          a href="index3.html"  Free Templates
-                        li
-                          a href="#"  Follow Feed
-                        li
-                          a href="#"  Top Authors
-                  li.has_dropdown
-                    a href="#"  categories
-                    .dropdowns.dropdown--menu
-                      ul
-                        li
-                          a href="category-grid.html"  Popular Items
-                        li
-                          a href="category-grid.html"  Admin Templates
-                        li
-                          a href="category-grid.html"  Blog / Magazine / News
-                        li
-                          a href="category-grid.html"  Creative
-                        li
-                          a href="category-grid.html"  Corporate Business
-                        li
-                          a href="category-grid.html"  Resume Portfolio
-                        li
-                          a href="category-grid.html"  eCommerce
-                        li
-                          a href="category-grid.html"  Entertainment
-                        li
-                          a href="category-grid.html"  Landing Pages
-                  li.has_megamenu
-                    a href="#"  Elements
-                    .dropdown_megamenu.contained
-                      .megamnu_module
-                        .menu_items
-                          .menu_column
-                            ul
-                              li
-                                a href="accordion.html"  Accordion
-                              li
-                                a href="alert.html"  Alert
-                              li
-                                a href="brands.html"  Brands
-                              li
-                                a href="buttons.html"  Buttons
-                              li
-                                a href="cards.html"  Cards
-                              li
-                                a href="charts.html"  Charts
-                              li
-                                a href="content-block.html"  Content Block
-                              li
-                                a href="dropdowns.html"  Drpdowns
-                          .menu_column
-                            ul
-                              li
-                                a href="features.html"  Features
-                              li
-                                a href="footer.html"  Footer
-                              li
-                                a href="info-box.html"  Info Box
-                              li
-                                a href="menu.html"  Menu
-                              li
-                                a href="modal.html"  Modal
-                              li
-                                a href="pagination.html"  Pagination
-                              li
-                                a href="peoples.html"  Peoples
-                              li
-                                a href="products.html"  Products
-                          .menu_column
-                            ul
-                              li
-                                a href="progressbar.html"  Progressbar
-                              li
-                                a href="social.html"  Social
-                              li
-                                a href="tab.html"  Tabs
-                              li
-                                a href="table.html"  Table
-                              li
-                                a href="testimonials.html"  Testimonials
-                              li
-                                a href="timeline.html"  Timeline
-                              li
-                                a href="typography.html"  Typography
-                  li.has_megamenu
-                    a href="#"  Pages
-                    .dropdown_megamenu
-                      .megamnu_module
-                        .menu_items
-                          .menu_column
-                            ul
-                              li.title Product
-                              li
-                                a href="all-products.html"  Products Grid
-                              li
-                                a href="all-products-list.html"  Products List
-                              li
-                                a href="category-grid.html"  Category Grid
-                              li
-                                a href="category-list.html"  Category List
-                              li
-                                a href="search-product.html"  Search Product
-                              li
-                                a href="single-product.html"  Single Product V1
-                              li
-                                a href="single-product-v2.html"  Single Product V2
-                              li
-                                a href="single-product-v3.html"  Single Product V3
-                              li
-                                a href="cart.html"  Shopping Cart
-                              li
-                                a href="checkout.html"  Checkout
-                          .menu_column
-                            ul
-                              li.title Author
-                              li
-                                a href="author.html"  Author Profile
-                              li
-                                a href="author-items.html"  Author Items
-                              li
-                                a href="author-reviews.html"  Customer Reviews
-                              li
-                                a href="author-followers.html"  Followers
-                              li
-                                a href="author-following.html"  Following
-                              li
-                                a href="notification.html"  Notifications
-                              li
-                                a href="message.html"  Message Inbox
-                              li
-                                a href="message-compose.html"  Message Compose
-                              li
-                                a href="favourites.html"  Favorites Items
-                          .menu_column
-                            ul
-                              li.title Dashboard
-                              li
-                                a href="dashboard.html"  Dashboard
-                              li
-                                a href="dashboard-setting.html"  Account Settings
-                              li
-                                a href="dashboard-purchase.html"  Author Purchases
-                              li
-                                a href="dashboard-add-credit.html"  Add Credits
-                              li
-                                a href="dashboard-statement.html"  Statements
-                              li
-                                a href="invoice.html"  Invoice
-                              li
-                                a href="dashboard-upload.html"  Upload Item
-                              li
-                                a href="dashboard-manage-item.html"  Edit Items
-                              li
-                                a href="dashboard-withdrawal.html"  Withdrawals
-                              li
-                                a href="dashboard-manage-item.html"  Manage Items
-                              li
-                                a href="add-payment-method.html"  Add Payment Method
-                          .menu_column
-                            ul
-                              li.title Customers
-                              li
-                                a href="support-forum.html"  Support Forum
-                              li
-                                a href="support-forum-detail.html"  Forum Details
-                              li
-                                a href="login.html"  Login
-                              li
-                                a href="signup.html"  Register
-                              li
-                                a href="recover-pass.html"  Recovery Password
-                              li
-                                a href="customer-dashboard.html"  Customer Dashboard
-                              li
-                                a href="customer-downloads.html"  Customer Downloads
-                              li
-                                a href="customer-info.html"  Customer Info
-                            ul
-                              li.title Blog
-                              li
-                                a href="blog1.html"  Blog V-1
-                              li
-                                a href="blog2.html"  Blog V-2
-                              li
-                                a href="single-blog.html"  Single Blog
-                          .menu_column
-                            ul
-                              li.title Other
-                              li
-                                a href="how-it-works.html"  How It Works
-                              li
-                                a href="about.html"  About Us
-                              li
-                                a href="pricing.html"  Pricing Plan
-                              li
-                                a href="testimonial.html"  Testimonials
-                              li
-                                a href="faq.html"  FAQs
-                              li
-                                a href="affiliate.html"  Affiliates
-                              li
-                                a href="term-condition.html"  Terms &amp; Conditions
-                              li
-                                a href="event.html"  Event
-                              li
-                                a href="event-detail.html"  Event Detail
-                              li.has_badge
-                                a href="badges.html"  Badges
-                                span.badge New
-                              li
-                                a href="404.html"  404 Error page
-                              li
-                                a href="carieer.html"  Job Posts
-                              li
-                                a href="job-detail.html"  Job Details
-                  li
-                    a href="contact.html"  contact
-              /! /.navbar-collapse
+            .hero__content__title
+              h1
+                span.light Create Your Own
+                span.bold Digital Product Marketplace
+              p.tagline MartPlace is the most powerful, & customizable template for Easy Digital Downloads Products
+            /! start .hero__btn-area
+            .hero__btn-area
+              a.btn.btn--round.btn--lg href="all-products.html"  View All Products
+              a.btn.btn--round.btn--lg href="all-products.html"  Popular Products
+            /! end .hero__btn-area
           /! end /.col-md-12
         /! end /.row
-      /! start .container
-    /! end /.mainmenu
-  /! end /.menu-area
-  /!
-    | \================================
-    | END MENU AREA
-    | \=================================
-  /!
-    | \================================
-    | START HERO AREA
-    | \=================================
-  section.hero-area.bgimage
-    .bg_image_holder
-      = image_tag 'hero_area_bg1.jpg', alt: 'background-image'
-    /! start hero-content
-    .hero-content.content_above
-      /! start .contact_wrapper
-      .content-wrapper
-        /! start .container
-        .container
-          /! start row
-          .row
-            /! start col-md-12
-            .col-md-12
-              .hero__content__title
-                h1
-                  span.light Create Your Own
-                  span.bold Digital Product Marketplace
-                p.tagline MartPlace is the most powerful, & customizable template for Easy Digital Downloads Products
-              /! start .hero__btn-area
-              .hero__btn-area
-                a.btn.btn--round.btn--lg href="all-products.html"  View All Products
-                a.btn.btn--round.btn--lg href="all-products.html"  Popular Products
-              /! end .hero__btn-area
-            /! end /.col-md-12
-          /! end /.row
-        /! end /.container
-      /! end .contact_wrapper
-    /! end hero-content
-    /! start search-area
-    .search-area
-      /! start .container
-      .container
-        /! start .container
-        .row
-          /! start .col-sm-12
-          .col-sm-12
-            /! start .search_box
-            .search_box
-              form action="#"
-                input.text_field placeholder=("Search your products...") type="text" /
-                .search__select.select-wrap
-                  select#blah.select--field name="category"
-                    option value=""  All Categories
-                    option value=""  PSD
-                    option value=""  HTML
-                    option value=""  WordPress
-                    option value=""  All Categories
-                  span.lnr.lnr-chevron-down
-                button.search-btn.btn--lg type="submit"  Search Now
-            /! end ./search_box
-          /! end /.col-sm-12
-        /! end /.row
       /! end /.container
-    /! start /.search-area
-  /!
-    | \================================
-    | END HERO AREA
-    | \=================================
-  /!
-    | \================================
-    | START FEATURE AREA
-    | \=================================
-  section.features.section--padding
-    /! start container
+    /! end .contact_wrapper
+  /! end hero-content
+  /! start search-area
+  .search-area
+    /! start .container
     .container
-      /! start row
+      /! start .container
       .row
-        /! start search-area
-        .col-lg-4.col-md-6
-          .feature
-            .feature__img
-              = image_tag 'feature1.png', alt: 'feature'
-            .feature__title
-              h3 Best UX Research
-            .feature__desc
-              p
-                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                |  leo quam aliquet diam congue is laoreet elit metus.
-          /! end /.feature
-        /! end /.col-lg-4 col-md-6
-        /! start search-area
-        .col-lg-4.col-md-6
-          .feature
-            .feature__img
-              = image_tag 'feature2.png', alt: 'feature'
-            .feature__title
-              h3 Fully Responsive
-            .feature__desc
-              p
-                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                |  leo quam aliquet diam congue is laoreet elit metus.
-          /! end /.feature
-        /! end /.col-lg-4 col-md-6
-        /! start search-area
-        .col-lg-4.col-md-6
-          .feature
-            .feature__img
-              = image_tag 'feature3.png', alt: 'feature'
-            .feature__title
-              h3 Buy & Sell Easily
-            .feature__desc
-              p
-                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                | leo quam aliquet diam congue is laoreet elit metus.
-          /! end /.feature
-        /! end /.col-lg-4 col-md-6
+        /! start .col-sm-12
+        .col-sm-12
+          /! start .search_box
+          .search_box
+            form action="#"
+              input.text_field placeholder=("Search your products...") type="text" /
+              .search__select.select-wrap
+                select#blah.select--field name="category"
+                  option value=""  All Categories
+                  option value=""  PSD
+                  option value=""  HTML
+                  option value=""  WordPress
+                  option value=""  All Categories
+                span.lnr.lnr-chevron-down
+              button.search-btn.btn--lg type="submit"  Search Now
+          /! end ./search_box
+        /! end /.col-sm-12
       /! end /.row
     /! end /.container
-  /!
-    | \================================
-    | END FEATURE AREA
-    | \=================================
-  /!
-    | \================================
-    | START FEATURED PRODUCT AREA
-    | \=================================
-  section.featured-products.bgcolor.section--padding
-    /! start /.container
-    .container
-      /! start row
-      .row
-        /! start col-md-12
-        .col-md-12
-          .product-title-area
-            .product__title
-              h2 Weekly Featured Products
-            .product__slider-nav.rounded
-              span.lnr.lnr-chevron-left.nav_left
-              span.lnr.lnr-chevron-right.nav_right
-        /! end /.col-md-12
-      /! end /.row
+  /! start /.search-area
+/!
+  | \================================
+  | END HERO AREA
+  | \=================================
+/!
+  | \================================
+  | START FEATURE AREA
+  | \=================================
+section.features.section--padding
+  /! start container
+  .container
+    /! start row
+    .row
+      /! start search-area
+      .col-lg-4.col-md-6
+        .feature
+          .feature__img
+            = image_tag 'feature1.png', alt: 'feature'
+          .feature__title
+            h3 Best UX Research
+          .feature__desc
+            p
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              |  leo quam aliquet diam congue is laoreet elit metus.
+        /! end /.feature
+      /! end /.col-lg-4 col-md-6
+      /! start search-area
+      .col-lg-4.col-md-6
+        .feature
+          .feature__img
+            = image_tag 'feature2.png', alt: 'feature'
+          .feature__title
+            h3 Fully Responsive
+          .feature__desc
+            p
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              |  leo quam aliquet diam congue is laoreet elit metus.
+        /! end /.feature
+      /! end /.col-lg-4 col-md-6
+      /! start search-area
+      .col-lg-4.col-md-6
+        .feature
+          .feature__img
+            = image_tag 'feature3.png', alt: 'feature'
+          .feature__title
+            h3 Buy & Sell Easily
+          .feature__desc
+            p
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              | leo quam aliquet diam congue is laoreet elit metus.
+        /! end /.feature
+      /! end /.col-lg-4 col-md-6
+    /! end /.row
+  /! end /.container
+/!
+  | \================================
+  | END FEATURE AREA
+  | \=================================
+/!
+  | \================================
+  | START FEATURED PRODUCT AREA
+  | \=================================
+section.featured-products.bgcolor.section--padding
+  /! start /.container
+  .container
+    /! start row
+    .row
+      /! start col-md-12
+      .col-md-12
+        .product-title-area
+          .product__title
+            h2 Weekly Featured Products
+          .product__slider-nav.rounded
+            span.lnr.lnr-chevron-left.nav_left
+            span.lnr.lnr-chevron-right.nav_right
+      /! end /.col-md-12
+    /! end /.row
 
-    /! start .featured-product-slider
-    .container
-      .row
-        .col-md-12.no0-padding
-          .featured-product-slider.prod-slider1
-            .featured__single-slider
-              .featured__preview-img
-                = image_tag 'featprod.jpg', alt: 'Featured products'
-                .prod_btn
-                  a.transparent.btn--sm.btn--round href="single-product.html"  More Info
-                  a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
-              /! end /.featured__preview-img
-              .featured__product-description
-                .product-desc.desc--featured
-                  = link_to 'single-product.html', :title => "Some link", :class=>"product_title" do
-                    h4 Rida - vCard, Portfolio / Resume Template
-
-                  ul.titlebtm
-                    li
-                      = image_tag "auth.jpg", :class=>"auth-img"
-                      p
-                        a href="#"  AazzTech
-                    li.product_cat
-                      a href="#"
-                        span.lnr.lnr-book
-                        | WordPress
-                  /! end /.titlebtm
-                  p
-                    | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
-                    | mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra,
-                    | justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
-                /! end /.product-desc
-                .product_data
-                  .tags.tags--round
-                    ul
-                      li
-                        a href="#"  website
-                      li
-                        a href="#"  plugin
-                      li
-                        a href="#"  landing page
-                  /! end /.tags
-                  .product-purchase.featured--product-purchase
-                    .price_love
-                      span $10 - $50
-                      p
-                        span.lnr.lnr-heart
-                        | 90
-                    .sell
-                      p
-                        span.lnr.lnr-cart
-                        span 16
-                    .rating.product--rating
-                      ul
-                        li
-                          span.fa.fa-star
-                        li
-                          span.fa.fa-star
-                        li
-                          span.fa.fa-star
-                        li
-                          span.fa.fa-star
-                        li
-                          span.fa.fa-star
-                  /! end /.product-purchase
-              /! end /.featured__product-description
-            /! end /.featured__single-slider
-            .featured__single-slider
-              .featured__preview-img
-                = image_tag 'featprod.jpg', alt: 'Featured products'
-
-                .prod_btn
-                  a.transparent.btn--sm.btn--round href="single-product.html"  More Info
-                  a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
-              /! end /.featured__preview-img
-              .featured__product-description
-                .product-desc.desc--featured
-                  a.product_title href="single-product.html"
-                  h4 One Page Resume Template
-                  ul.titlebtm
-                    li
-                      = image_tag "auth.jpg", :class=>"auth-img"
-                      p
-                        a href="#"  AazzTech
-                    li.product_cat
-                      a href="#"
-                        span.lnr.lnr-book
-                        | WordPress
-                  /! end /.titlebtm
-                  p
-                    | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
-                    | mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra,
-                    | justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
-                /! end /.product-desc
-                .product_data
-                  .tags.tags--round
-                    ul
-                      li
-                        a href="#"  website
-                      li
-                        a href="#"  plugin
-                      li
-                        a href="#"  landing page
-                  /! end /.tags
-                  .product-purchase.featured--product-purchase
-                    .price_love
-                      span $10 - $50
-                      p
-                        span.lnr.lnr-heart
-                        | 90
-                    .sell
-                      p
-                        span.lnr.lnr-cart
-                        span 16
-                    .rating.product--rating
-                      ul
-                        li
-                          span.fa.fa-star
-                        li
-                          span.fa.fa-star
-                        li
-                          span.fa.fa-star
-                        li
-                          span.fa.fa-star
-                        li
-                          span.fa.fa-star
-                  /! end /.product-purchase
-              /! end /.featured__product-description
-            /! end /.featured__single-slider
-            .featured__single-slider
-              .featured__preview-img
-                = image_tag 'featprod.jpg', alt: 'Featured products'
-                .prod_btn
-                  a.transparent.btn--sm.btn--round href="single-product.html"  More Info
-                  a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
-              /! end /.featured__preview-img
-              .featured__product-description
-                .product-desc.desc--featured
-                  a.product_title href="single-product.html"
-                  h4 AppsPress App Landing
-                  ul.titlebtm
-                    li
-                      = image_tag "auth.jpg", :class=>"auth-img"
-                      p
-                        a href="#"  AazzTech
-                    li.product_cat
-                      a href="#"
-                        span.lnr.lnr-book
-                        | WordPress
-                  /! end /.titlebtm
-                  p
-                    | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
-                    | mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra,
-                    | justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
-                /! end /.product-desc
-                .product_data
-                  .tags.tags--round
-                    ul
-                      li
-                        a href="#"  website
-                      li
-                        a href="#"  plugin
-                      li
-                        a href="#"  landing page
-                  /! end /.tags
-                  .product-purchase.featured--product-purchase
-                    .price_love
-                      span $10 - $50
-                      p
-                        span.lnr.lnr-heart
-                        | 90
-                    .sell
-                      p
-                        span.lnr.lnr-cart
-                        span 16
-                    .rating.product--rating
-                      ul
-                        li
-                          span.fa.fa-star
-                        li
-                          span.fa.fa-star
-                        li
-                          span.fa.fa-star
-                        li
-                          span.fa.fa-star
-                        li
-                          span.fa.fa-star
-                  /! end /.product-purchase
-              /! end /.featured__product-description
-            /! end /.featured__single-slider
-            .featured__single-slider
-              .featured__preview-img
-                = image_tag 'featprod.jpg', alt: 'Featured products'
-                .prod_btn
-                  a.transparent.btn--sm.btn--round href="single-product.html"  More Info
-                  a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
-              /! end /.featured__preview-img
-              .featured__product-description
-                .product-desc.desc--featured
-                  a.product_title href="single-product.html"
-                  h4 MartPlace - Digital Marketplace
-                  ul.titlebtm
-                    li
-                      = image_tag "auth.jpg", :class=>"auth-img"
-                      p
-                        a href="#"  AazzTech
-                    li.product_cat
-                      a href="#"
-                        span.lnr.lnr-book
-                        | WordPress
-                  /! end /.titlebtm
-                  p
-                    | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
-                    | mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra,
-                    | justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
-                /! end /.product-desc
-                .product_data
-                  .tags.tags--round
-                    ul
-                      li
-                        a href="#"  website
-                      li
-                        a href="#"  plugin
-                      li
-                        a href="#"  landing page
-                  /! end /.tags
-                  .product-purchase.featured--product-purchase
-                    .price_love
-                      span $10 - $50
-                      p
-                        span.lnr.lnr-heart
-                        | 90
-                    .sell
-                      p
-                        span.lnr.lnr-cart
-                        span 16
-                    .rating.product--rating
-                      ul
-                        li
-                          span.fa.fa-star
-                        li
-                          span.fa.fa-star
-                        li
-                          span.fa.fa-star
-                        li
-                          span.fa.fa-star
-                        li
-                          span.fa.fa-star
-                  /! end /.product-purchase
-              /! end /.featured__product-description
-            /! end /.featured__single-slider
-      /! end /.featured__preview-img
-    /! end /.featured-product-slider
-
-  /!
-    | \================================
-    | END FEATURED PRODUCT AREA
-    | \=================================
-  /!
-    | \================================
-    | START PRODUCTS AREA
-    | \=================================
-  section.products.section--padding
-    /! start container
-    .container
-      /! start row
-      .row
-        /! start col-md-12
-        .col-md-12
-          .product-title-area
-            .product__title
-              h2 Newest Release Products
-            .filter__menu
-              p Filter by:
-              .filter__menu_icon
-                a#drop1.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#"
-                  = image_tag 'svg/menu.svg', alt: 'menu icon', :class=> "svg"
-                ul.filter_dropdown.dropdown-menu aria-labelledby="drop1"
-                  li
-                    a href="#"  Trending items
-                  li
-                    a href="#"  Best seller
-                  li
-                    a href="#"  Best rating
-                  li
-                    a href="#"  Low price
-                  li
-                    a href="#"  High price
-        /! end /.col-md-12
-      /! end /.row
-      /! start row
-      .row
-        /! start .col-md-12
-        .col-md-12
-          .sorting
-            ul
-              li
-                a href="#"  Plugins
-              li
-                a href="#"  WordPress
-              li
-                a href="#"  Site Template
-              li
-                a href="#"  PSD Template
-              li
-                a href="#"  Joomla
-              li
-                a href="#"  User Interface
-              li
-                a href="#"  Landing Page
-              li
-                a href="#"  Software
-        /! end /.col-md-12
-      /! end /.row
-      /! start .row
-      .row
-        /! start .col-md-4
-        .col-lg-4.col-md-6
-          /! start .single-product
-          .product.product--card
-            .product__thumbnail
-              = image_tag 'p1.jpg', alt: 'Product Image'
+  /! start .featured-product-slider
+  .container
+    .row
+      .col-md-12.no0-padding
+        .featured-product-slider.prod-slider1
+          .featured__single-slider
+            .featured__preview-img
+              = image_tag 'featprod.jpg', alt: 'Featured products'
               .prod_btn
                 a.transparent.btn--sm.btn--round href="single-product.html"  More Info
                 a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
-              /! end /.prod_btn
-            /! end /.product__thumbnail
-            .product-desc
-              a.product_title href="single-product.html"
-              h4 MartPlace Extension Bundle
-              ul.titlebtm
-                li
-                  = image_tag "auth.jpg", :class=>"auth-img"
-                  p
-                    a href="#"  AazzTech
-                li.product_cat
-                  a href="#"
-                    span.lnr.lnr-book
-                    | Plugin
-              p
-                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                | leo quam aliquet congue.
-            /! end /.product-desc
-            .product-purchase
-              .price_love
-                span $10 - $50
+            /! end /.featured__preview-img
+            .featured__product-description
+              .product-desc.desc--featured
+                = link_to 'single-product.html', :title => "Some link", :class=>"product_title" do
+                  h4 Rida - vCard, Portfolio / Resume Template
+
+                ul.titlebtm
+                  li
+                    = image_tag "auth.jpg", :class=>"auth-img"
+                    p
+                      a href="#"  AazzTech
+                  li.product_cat
+                    a href="#"
+                      span.lnr.lnr-book
+                      | WordPress
+                /! end /.titlebtm
                 p
-                  span.lnr.lnr-heart
-                  | 90
-              .sell
-                p
-                  span.lnr.lnr-cart
-                  span 16
-            /! end /.product-purchase
-          /! end /.single-product
-        /! end /.col-md-4
-        /! start .col-md-4
-        .col-lg-4.col-md-6
-          /! start .single-product
-          .product.product--card
-            .product__thumbnail
-              = image_tag 'p2.jpg', alt: 'Product Image'
+                  | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                  | mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra,
+                  | justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
+              /! end /.product-desc
+              .product_data
+                .tags.tags--round
+                  ul
+                    li
+                      a href="#"  website
+                    li
+                      a href="#"  plugin
+                    li
+                      a href="#"  landing page
+                /! end /.tags
+                .product-purchase.featured--product-purchase
+                  .price_love
+                    span $10 - $50
+                    p
+                      span.lnr.lnr-heart
+                      | 90
+                  .sell
+                    p
+                      span.lnr.lnr-cart
+                      span 16
+                  .rating.product--rating
+                    ul
+                      li
+                        span.fa.fa-star
+                      li
+                        span.fa.fa-star
+                      li
+                        span.fa.fa-star
+                      li
+                        span.fa.fa-star
+                      li
+                        span.fa.fa-star
+                /! end /.product-purchase
+            /! end /.featured__product-description
+          /! end /.featured__single-slider
+          .featured__single-slider
+            .featured__preview-img
+              = image_tag 'featprod.jpg', alt: 'Featured products'
+
               .prod_btn
                 a.transparent.btn--sm.btn--round href="single-product.html"  More Info
                 a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
-              /! end /.prod_btn
-            /! end /.product__thumbnail
-            .product-desc
-              a.product_title href="single-product.html"
-              h4 Mccarther Coffee Shop
-              ul.titlebtm
-                li
-                  = image_tag "auth2.jpg", :class=>"auth-img"
-                  p
-                    a href="#"  AazzTech
-                li.product_cat
-                  a href="#"
-                    span.lnr.lnr-book
-                    | Plugin
-              p
-                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                | leo quam aliquet congue.
-            /! end /.product-desc
-            .product-purchase
-              .price_love
-                span $10
+            /! end /.featured__preview-img
+            .featured__product-description
+              .product-desc.desc--featured
+                a.product_title href="single-product.html"
+                h4 One Page Resume Template
+                ul.titlebtm
+                  li
+                    = image_tag "auth.jpg", :class=>"auth-img"
+                    p
+                      a href="#"  AazzTech
+                  li.product_cat
+                    a href="#"
+                      span.lnr.lnr-book
+                      | WordPress
+                /! end /.titlebtm
                 p
-                  span.lnr.lnr-heart
-                  | 48
-              .sell
-                p
-                  span.lnr.lnr-cart
-                  span 50
-            /! end /.product-purchase
-          /! end /.single-product
-        /! end /.col-md-4
-        /! start .col-md-4
-        .col-lg-4.col-md-6
-          /! start .single-product
-          .product.product--card
-            .product__thumbnail
-              = image_tag 'p3.jpg', alt: 'Product Image'
+                  | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                  | mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra,
+                  | justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
+              /! end /.product-desc
+              .product_data
+                .tags.tags--round
+                  ul
+                    li
+                      a href="#"  website
+                    li
+                      a href="#"  plugin
+                    li
+                      a href="#"  landing page
+                /! end /.tags
+                .product-purchase.featured--product-purchase
+                  .price_love
+                    span $10 - $50
+                    p
+                      span.lnr.lnr-heart
+                      | 90
+                  .sell
+                    p
+                      span.lnr.lnr-cart
+                      span 16
+                  .rating.product--rating
+                    ul
+                      li
+                        span.fa.fa-star
+                      li
+                        span.fa.fa-star
+                      li
+                        span.fa.fa-star
+                      li
+                        span.fa.fa-star
+                      li
+                        span.fa.fa-star
+                /! end /.product-purchase
+            /! end /.featured__product-description
+          /! end /.featured__single-slider
+          .featured__single-slider
+            .featured__preview-img
+              = image_tag 'featprod.jpg', alt: 'Featured products'
               .prod_btn
                 a.transparent.btn--sm.btn--round href="single-product.html"  More Info
                 a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
-              /! end /.prod_btn
-            /! end /.product__thumbnail
-            .product-desc
-              a.product_title href="single-product.html"
-              h4 Visibility Manager Subscriptions
-              ul.titlebtm
+            /! end /.featured__preview-img
+            .featured__product-description
+              .product-desc.desc--featured
+                a.product_title href="single-product.html"
+                h4 AppsPress App Landing
+                ul.titlebtm
+                  li
+                    = image_tag "auth.jpg", :class=>"auth-img"
+                    p
+                      a href="#"  AazzTech
+                  li.product_cat
+                    a href="#"
+                      span.lnr.lnr-book
+                      | WordPress
+                /! end /.titlebtm
+                p
+                  | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                  | mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra,
+                  | justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
+              /! end /.product-desc
+              .product_data
+                .tags.tags--round
+                  ul
+                    li
+                      a href="#"  website
+                    li
+                      a href="#"  plugin
+                    li
+                      a href="#"  landing page
+                /! end /.tags
+                .product-purchase.featured--product-purchase
+                  .price_love
+                    span $10 - $50
+                    p
+                      span.lnr.lnr-heart
+                      | 90
+                  .sell
+                    p
+                      span.lnr.lnr-cart
+                      span 16
+                  .rating.product--rating
+                    ul
+                      li
+                        span.fa.fa-star
+                      li
+                        span.fa.fa-star
+                      li
+                        span.fa.fa-star
+                      li
+                        span.fa.fa-star
+                      li
+                        span.fa.fa-star
+                /! end /.product-purchase
+            /! end /.featured__product-description
+          /! end /.featured__single-slider
+          .featured__single-slider
+            .featured__preview-img
+              = image_tag 'featprod.jpg', alt: 'Featured products'
+              .prod_btn
+                a.transparent.btn--sm.btn--round href="single-product.html"  More Info
+                a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
+            /! end /.featured__preview-img
+            .featured__product-description
+              .product-desc.desc--featured
+                a.product_title href="single-product.html"
+                h4 MartPlace - Digital Marketplace
+                ul.titlebtm
+                  li
+                    = image_tag "auth.jpg", :class=>"auth-img"
+                    p
+                      a href="#"  AazzTech
+                  li.product_cat
+                    a href="#"
+                      span.lnr.lnr-book
+                      | WordPress
+                /! end /.titlebtm
+                p
+                  | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                  | mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra,
+                  | justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
+              /! end /.product-desc
+              .product_data
+                .tags.tags--round
+                  ul
+                    li
+                      a href="#"  website
+                    li
+                      a href="#"  plugin
+                    li
+                      a href="#"  landing page
+                /! end /.tags
+                .product-purchase.featured--product-purchase
+                  .price_love
+                    span $10 - $50
+                    p
+                      span.lnr.lnr-heart
+                      | 90
+                  .sell
+                    p
+                      span.lnr.lnr-cart
+                      span 16
+                  .rating.product--rating
+                    ul
+                      li
+                        span.fa.fa-star
+                      li
+                        span.fa.fa-star
+                      li
+                        span.fa.fa-star
+                      li
+                        span.fa.fa-star
+                      li
+                        span.fa.fa-star
+                /! end /.product-purchase
+            /! end /.featured__product-description
+          /! end /.featured__single-slider
+    /! end /.featured__preview-img
+  /! end /.featured-product-slider
+
+/!
+  | \================================
+  | END FEATURED PRODUCT AREA
+  | \=================================
+/!
+  | \================================
+  | START PRODUCTS AREA
+  | \=================================
+section.products.section--padding
+  /! start container
+  .container
+    /! start row
+    .row
+      /! start col-md-12
+      .col-md-12
+        .product-title-area
+          .product__title
+            h2 Newest Release Products
+          .filter__menu
+            p Filter by:
+            .filter__menu_icon
+              a#drop1.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#"
+                = image_tag 'svg/menu.svg', alt: 'menu icon', :class=> "svg"
+              ul.filter_dropdown.dropdown-menu aria-labelledby="drop1"
                 li
-                  = image_tag "auth3.jpg", :class=>"auth-img"
-                  p
-                    a href="#"  AazzTech
-                li.product_cat
-                  a href="#"
-                    span.lnr.lnr-book
-                    | Plugin
+                  a href="#"  Trending items
+                li
+                  a href="#"  Best seller
+                li
+                  a href="#"  Best rating
+                li
+                  a href="#"  Low price
+                li
+                  a href="#"  High price
+      /! end /.col-md-12
+    /! end /.row
+    /! start row
+    .row
+      /! start .col-md-12
+      .col-md-12
+        .sorting
+          ul
+            li
+              a href="#"  Plugins
+            li
+              a href="#"  WordPress
+            li
+              a href="#"  Site Template
+            li
+              a href="#"  PSD Template
+            li
+              a href="#"  Joomla
+            li
+              a href="#"  User Interface
+            li
+              a href="#"  Landing Page
+            li
+              a href="#"  Software
+      /! end /.col-md-12
+    /! end /.row
+    /! start .row
+    .row
+      /! start .col-md-4
+      .col-lg-4.col-md-6
+        /! start .single-product
+        .product.product--card
+          .product__thumbnail
+            = image_tag 'p1.jpg', alt: 'Product Image'
+            .prod_btn
+              a.transparent.btn--sm.btn--round href="single-product.html"  More Info
+              a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
+            /! end /.prod_btn
+          /! end /.product__thumbnail
+          .product-desc
+            a.product_title href="single-product.html"
+            h4 MartPlace Extension Bundle
+            ul.titlebtm
+              li
+                = image_tag "auth.jpg", :class=>"auth-img"
+                p
+                  a href="#"  AazzTech
+              li.product_cat
+                a href="#"
+                  span.lnr.lnr-book
+                  | Plugin
+            p
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              | leo quam aliquet congue.
+          /! end /.product-desc
+          .product-purchase
+            .price_love
+              span $10 - $50
               p
-                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                | leo quam aliquet congue.
-            /! end /.product-desc
-            .product-purchase
-              .price_love
-                span Free
+                span.lnr.lnr-heart
+                | 90
+            .sell
+              p
+                span.lnr.lnr-cart
+                span 16
+          /! end /.product-purchase
+        /! end /.single-product
+      /! end /.col-md-4
+      /! start .col-md-4
+      .col-lg-4.col-md-6
+        /! start .single-product
+        .product.product--card
+          .product__thumbnail
+            = image_tag 'p2.jpg', alt: 'Product Image'
+            .prod_btn
+              a.transparent.btn--sm.btn--round href="single-product.html"  More Info
+              a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
+            /! end /.prod_btn
+          /! end /.product__thumbnail
+          .product-desc
+            a.product_title href="single-product.html"
+            h4 Mccarther Coffee Shop
+            ul.titlebtm
+              li
+                = image_tag "auth2.jpg", :class=>"auth-img"
                 p
-                  span.lnr.lnr-heart
-                  | 24
-              .rating.product--rating
-                ul
-                  li
-                    span.fa.fa-star
-                  li
-                    span.fa.fa-star
-                  li
-                    span.fa.fa-star
-                  li
-                    span.fa.fa-star
-                  li
-                    span.fa.fa-star
-              .sell
+                  a href="#"  AazzTech
+              li.product_cat
+                a href="#"
+                  span.lnr.lnr-book
+                  | Plugin
+            p
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              | leo quam aliquet congue.
+          /! end /.product-desc
+          .product-purchase
+            .price_love
+              span $10
+              p
+                span.lnr.lnr-heart
+                | 48
+            .sell
+              p
+                span.lnr.lnr-cart
+                span 50
+          /! end /.product-purchase
+        /! end /.single-product
+      /! end /.col-md-4
+      /! start .col-md-4
+      .col-lg-4.col-md-6
+        /! start .single-product
+        .product.product--card
+          .product__thumbnail
+            = image_tag 'p3.jpg', alt: 'Product Image'
+            .prod_btn
+              a.transparent.btn--sm.btn--round href="single-product.html"  More Info
+              a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
+            /! end /.prod_btn
+          /! end /.product__thumbnail
+          .product-desc
+            a.product_title href="single-product.html"
+            h4 Visibility Manager Subscriptions
+            ul.titlebtm
+              li
+                = image_tag "auth3.jpg", :class=>"auth-img"
                 p
-                  span.lnr.lnr-cart
-                  span 27
-            /! end /.product-purchase
-          /! end /.single-product
-        /! end /.col-md-4
-        /! start .col-md-4
-        .col-lg-4.col-md-6
+                  a href="#"  AazzTech
+              li.product_cat
+                a href="#"
+                  span.lnr.lnr-book
+                  | Plugin
+            p
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              | leo quam aliquet congue.
+          /! end /.product-desc
+          .product-purchase
+            .price_love
+              span Free
+              p
+                span.lnr.lnr-heart
+                | 24
+            .rating.product--rating
+              ul
+                li
+                  span.fa.fa-star
+                li
+                  span.fa.fa-star
+                li
+                  span.fa.fa-star
+                li
+                  span.fa.fa-star
+                li
+                  span.fa.fa-star
+            .sell
+              p
+                span.lnr.lnr-cart
+                span 27
+          /! end /.product-purchase
+        /! end /.single-product
+      /! end /.col-md-4
+      /! start .col-md-4
+      .col-lg-4.col-md-6
+        /! start .single-product
+        .product.product--card
+          .product__thumbnail
+            = image_tag 'p4.jpg', alt: 'Product Image'
+            .prod_btn
+              a.transparent.btn--sm.btn--round href="single-product.html"  More Info
+              a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
+            /! end /.prod_btn
+          /! end /.product__thumbnail
+          .product-desc
+            a.product_title href="single-product.html"
+            h4 Ajax Live Search
+            ul.titlebtm
+              li
+                = image_tag "auth.jpg", :class=>"auth-img"
+                p
+                  a href="#"  AazzTech
+              li.product_cat
+                a href="#"
+                  span.lnr.lnr-book
+                  | Plugin
+            p
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              | leo quam aliquet congue.
+          /! end /.product-desc
+          .product-purchase
+            .price_love
+              span $10 - $50
+              p
+                span.lnr.lnr-heart
+                | 90
+            .sell
+              p
+                span.lnr.lnr-cart
+                span 16
+          /! end /.product-purchase
+        /! end /.single-product
+      /! end /.col-md-4
+      /! start .col-md-4
+      .col-lg-4.col-md-6
+        /! start .single-product
+        .product.product--card
+          .product__thumbnail
+            = image_tag 'p5.jpg', alt: 'Product Image'
+            .prod_btn
+              a.transparent.btn--sm.btn--round href="single-product.html"  More Info
+              a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
+            /! end /.prod_btn
+          /! end /.product__thumbnail
+          .product-desc
+            a.product_title href="single-product.html"
+            h4 Mccarther Coffee Shop
+            ul.titlebtm
+              li
+                = image_tag "auth2.jpg", :class=>"auth-img"
+                p
+                  a href="#"  AazzTech
+              li.product_cat
+                a href="#"
+                  span.lnr.lnr-book
+                  | Plugin
+            p
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              | leo quam aliquet congue.
+          /! end /.product-desc
+          .product-purchase
+            .price_love
+              span $10
+              p
+                span.lnr.lnr-heart
+                | 48
+            .sell
+              p
+                span.lnr.lnr-cart
+                span 50
+          /! end /.product-purchase
+        /! end /.single-product
+      /! end /.col-md-4
+      /! start .col-md-4
+      .col-lg-4.col-md-6
+        /! start .single-product
+        .product.product--card
+          .product__thumbnail
+            = image_tag 'p6.jpg', alt: 'Product Image'
+            .prod_btn
+              a.transparent.btn--sm.btn--round href="single-product.html"  More Info
+              a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
+            /! end /.prod_btn
+          /! end /.product__thumbnail
+          .product-desc
+            a.product_title href="single-product.html"
+            h4 Visibility Manager Subscriptions
+            ul.titlebtm
+              li
+                = image_tag "auth3.jpg", :class=>"auth-img"
+                p
+                  a href="#"  AazzTech
+              li.product_cat
+                a href="#"
+                  span.lnr.lnr-book
+                  | WordPress
+            p
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              | leo quam aliquet congue.
+          /! end /.product-desc
+          .product-purchase
+            .price_love
+              span Free
+              p
+                span.lnr.lnr-heart
+                | 24
+            .rating.product--rating
+              ul
+                li
+                  span.fa.fa-star
+                li
+                  span.fa.fa-star
+                li
+                  span.fa.fa-star
+                li
+                  span.fa.fa-star
+                li
+                  span.fa.fa-star-half-o
+            .sell
+              p
+                span.lnr.lnr-cart
+                span 27
+          /! end /.product-purchase
+        /! end /.single-product
+      /! end /.col-md-4
+    /! end /.row
+    /! start .row
+    .row
+      .col-md-12
+        .more-product
+          a.btn.btn--lg.btn--round href="all-products.html"  All New Products
+      /! end ./col-md-12
+    /! end /.row
+  /! end /.container
+/!
+  | \================================
+  | END PRODUCTS AREA
+  | \=================================
+/!
+  | \================================
+  | START FOLLOWERS FEED AREA
+  | \=================================
+section.followers-feed.section--padding
+  /! start .container
+  .container
+    /! start row
+    .row
+      /! start col-md-12
+      .col-md-12
+        .product-title-area
+          .product__title
+            h2 Your Followers Feed
+          .product__slider-nav.follow_feed_nav.rounded
+            span.lnr.lnr-chevron-left.nav_left
+            span.lnr.lnr-chevron-right.nav_right
+      /! end /.col-md-12
+    /! end /.row
+    /! start /.row
+    .row
+      .col-md-12
+        .product_slider
           /! start .single-product
           .product.product--card
             .product__thumbnail
@@ -1139,7 +760,7 @@ body.preload.home1.mutlti-vendor
               /! end /.prod_btn
             /! end /.product__thumbnail
             .product-desc
-              a.product_title href="single-product.html"
+              a.product_title href="#"
               h4 Ajax Live Search
               ul.titlebtm
                 li
@@ -1166,20 +787,17 @@ body.preload.home1.mutlti-vendor
                   span 16
             /! end /.product-purchase
           /! end /.single-product
-        /! end /.col-md-4
-        /! start .col-md-4
-        .col-lg-4.col-md-6
           /! start .single-product
           .product.product--card
             .product__thumbnail
-              = image_tag 'p5.jpg', alt: 'Product Image'
+              = image_tag 'p2.jpg', alt: 'Product Image'
               .prod_btn
                 a.transparent.btn--sm.btn--round href="single-product.html"  More Info
                 a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
               /! end /.prod_btn
             /! end /.product__thumbnail
             .product-desc
-              a.product_title href="single-product.html"
+              a.product_title href="#"
               h4 Mccarther Coffee Shop
               ul.titlebtm
                 li
@@ -1206,9 +824,6 @@ body.preload.home1.mutlti-vendor
                   span 50
             /! end /.product-purchase
           /! end /.single-product
-        /! end /.col-md-4
-        /! start .col-md-4
-        .col-lg-4.col-md-6
           /! start .single-product
           .product.product--card
             .product__thumbnail
@@ -1219,7 +834,7 @@ body.preload.home1.mutlti-vendor
               /! end /.prod_btn
             /! end /.product__thumbnail
             .product-desc
-              a.product_title href="single-product.html"
+              a.product_title href="#"
               h4 Visibility Manager Subscriptions
               ul.titlebtm
                 li
@@ -1240,846 +855,569 @@ body.preload.home1.mutlti-vendor
                 p
                   span.lnr.lnr-heart
                   | 24
-              .rating.product--rating
-                ul
-                  li
-                    span.fa.fa-star
-                  li
-                    span.fa.fa-star
-                  li
-                    span.fa.fa-star
-                  li
-                    span.fa.fa-star
-                  li
-                    span.fa.fa-star-half-o
               .sell
                 p
                   span.lnr.lnr-cart
                   span 27
             /! end /.product-purchase
           /! end /.single-product
-        /! end /.col-md-4
-      /! end /.row
-      /! start .row
-      .row
-        .col-md-12
-          .more-product
-            a.btn.btn--lg.btn--round href="all-products.html"  All New Products
-        /! end ./col-md-12
-      /! end /.row
-    /! end /.container
-  /!
-    | \================================
-    | END PRODUCTS AREA
-    | \=================================
-  /!
-    | \================================
-    | START FOLLOWERS FEED AREA
-    | \=================================
-  section.followers-feed.section--padding
-    /! start .container
-    .container
-      /! start row
-      .row
-        /! start col-md-12
-        .col-md-12
-          .product-title-area
-            .product__title
-              h2 Your Followers Feed
-            .product__slider-nav.follow_feed_nav.rounded
-              span.lnr.lnr-chevron-left.nav_left
-              span.lnr.lnr-chevron-right.nav_right
-        /! end /.col-md-12
-      /! end /.row
-      /! start /.row
-      .row
-        .col-md-12
-          .product_slider
-            /! start .single-product
-            .product.product--card
-              .product__thumbnail
-                = image_tag 'p4.jpg', alt: 'Product Image'
-                .prod_btn
-                  a.transparent.btn--sm.btn--round href="single-product.html"  More Info
-                  a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
-                /! end /.prod_btn
-              /! end /.product__thumbnail
-              .product-desc
-                a.product_title href="#"
-                h4 Ajax Live Search
-                ul.titlebtm
-                  li
-                    = image_tag "auth.jpg", :class=>"auth-img"
-                    p
-                      a href="#"  AazzTech
-                  li.product_cat
-                    a href="#"
-                      span.lnr.lnr-book
-                      | Plugin
+          /! start .single-product
+          .product.product--card
+            .product__thumbnail
+              = image_tag 'p6.jpg', alt: 'Product Image'
+              .prod_btn
+                a.transparent.btn--sm.btn--round href="single-product.html"  More Info
+                a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
+              /! end /.prod_btn
+            /! end /.product__thumbnail
+            .product-desc
+              a.product_title href="#"
+              h4 Ajax Live Search
+              ul.titlebtm
+                li
+                  = image_tag "auth.jpg", :class=>"auth-img"
+                  p
+                    a href="#"  AazzTech
+                li.product_cat
+                  a href="#"
+                    span.lnr.lnr-book
+                    | Plugin
+              p
+                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+                | leo quam aliquet congue.
+            /! end /.product-desc
+            .product-purchase
+              .price_love
+                span $10 - $50
                 p
-                  | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                  | leo quam aliquet congue.
-              /! end /.product-desc
-              .product-purchase
-                .price_love
-                  span $10 - $50
-                  p
-                    span.lnr.lnr-heart
-                    | 90
-                .sell
-                  p
-                    span.lnr.lnr-cart
-                    span 16
-              /! end /.product-purchase
-            /! end /.single-product
-            /! start .single-product
-            .product.product--card
-              .product__thumbnail
-                = image_tag 'p2.jpg', alt: 'Product Image'
-                .prod_btn
-                  a.transparent.btn--sm.btn--round href="single-product.html"  More Info
-                  a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
-                /! end /.prod_btn
-              /! end /.product__thumbnail
-              .product-desc
-                a.product_title href="#"
-                h4 Mccarther Coffee Shop
-                ul.titlebtm
-                  li
-                    = image_tag "auth2.jpg", :class=>"auth-img"
-                    p
-                      a href="#"  AazzTech
-                  li.product_cat
-                    a href="#"
-                      span.lnr.lnr-book
-                      | Plugin
+                  span.lnr.lnr-heart
+                  | 90
+              .sell
                 p
-                  | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                  | leo quam aliquet congue.
-              /! end /.product-desc
-              .product-purchase
-                .price_love
-                  span $10
+                  span.lnr.lnr-cart
+                  span 16
+            /! end /.product-purchase
+          /! end /.single-product
+          /! start .single-product
+          .product.product--card
+            .product__thumbnail
+              = image_tag 'p2.jpg', alt: 'Product Image'
+              .prod_btn
+                a.transparent.btn--sm.btn--round href="single-product.html"  More Info
+                a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
+              /! end /.prod_btn
+            /! end /.product__thumbnail
+            .product-desc
+              a.product_title href="#"
+              h4 Mccarther Coffee Shop
+              ul.titlebtm
+                li
+                  = image_tag "auth2.jpg", :class=>"auth-img"
                   p
-                    span.lnr.lnr-heart
-                    | 48
-                .sell
-                  p
-                    span.lnr.lnr-cart
-                    span 50
-              /! end /.product-purchase
-            /! end /.single-product
-            /! start .single-product
-            .product.product--card
-              .product__thumbnail
-                = image_tag 'p6.jpg', alt: 'Product Image'
-                .prod_btn
-                  a.transparent.btn--sm.btn--round href="single-product.html"  More Info
-                  a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
-                /! end /.prod_btn
-              /! end /.product__thumbnail
-              .product-desc
-                a.product_title href="#"
-                h4 Visibility Manager Subscriptions
-                ul.titlebtm
-                  li
-                    = image_tag "auth3.jpg", :class=>"auth-img"
-                    p
-                      a href="#"  AazzTech
-                  li.product_cat
-                    a href="#"
-                      span.lnr.lnr-book
-                      | WordPress
+                    a href="#"  AazzTech
+                li.product_cat
+                  a href="#"
+                    span.lnr.lnr-book
+                    | Plugin
+              p
+                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+                | leo quam aliquet congue.
+            /! end /.product-desc
+            .product-purchase
+              .price_love
+                span $10
                 p
-                  | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                  | leo quam aliquet congue.
-              /! end /.product-desc
-              .product-purchase
-                .price_love
-                  span Free
-                  p
-                    span.lnr.lnr-heart
-                    | 24
-                .sell
-                  p
-                    span.lnr.lnr-cart
-                    span 27
-              /! end /.product-purchase
-            /! end /.single-product
-            /! start .single-product
-            .product.product--card
-              .product__thumbnail
-                = image_tag 'p6.jpg', alt: 'Product Image'
-                .prod_btn
-                  a.transparent.btn--sm.btn--round href="single-product.html"  More Info
-                  a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
-                /! end /.prod_btn
-              /! end /.product__thumbnail
-              .product-desc
-                a.product_title href="#"
-                h4 Ajax Live Search
-                ul.titlebtm
-                  li
-                    = image_tag "auth.jpg", :class=>"auth-img"
-                    p
-                      a href="#"  AazzTech
-                  li.product_cat
-                    a href="#"
-                      span.lnr.lnr-book
-                      | Plugin
+                  span.lnr.lnr-heart
+                  | 48
+              .sell
                 p
-                  | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                  | leo quam aliquet congue.
-              /! end /.product-desc
-              .product-purchase
-                .price_love
-                  span $10 - $50
+                  span.lnr.lnr-cart
+                  span 50
+            /! end /.product-purchase
+          /! end /.single-product
+          /! start .single-product
+          .product.product--card
+            .product__thumbnail
+              = image_tag 'p6.jpg', alt: 'Product Image'
+              .prod_btn
+                a.transparent.btn--sm.btn--round href="single-product.html"  More Info
+                a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
+              /! end /.prod_btn
+            /! end /.product__thumbnail
+            .product-desc
+              a.product_title href="#"
+              h4 Visibility Manager Subscriptions
+              ul.titlebtm
+                li
+                  = image_tag "auth3.jpg", :class=>"auth-img"
                   p
-                    span.lnr.lnr-heart
-                    | 90
-                .sell
-                  p
-                    span.lnr.lnr-cart
-                    span 16
-              /! end /.product-purchase
-            /! end /.single-product
-            /! start .single-product
-            .product.product--card
-              .product__thumbnail
-                = image_tag 'p2.jpg', alt: 'Product Image'
-                .prod_btn
-                  a.transparent.btn--sm.btn--round href="single-product.html"  More Info
-                  a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
-                /! end /.prod_btn
-              /! end /.product__thumbnail
-              .product-desc
-                a.product_title href="#"
-                h4 Mccarther Coffee Shop
-                ul.titlebtm
-                  li
-                    = image_tag "auth2.jpg", :class=>"auth-img"
-                    p
-                      a href="#"  AazzTech
-                  li.product_cat
-                    a href="#"
-                      span.lnr.lnr-book
-                      | Plugin
+                    a href="#"  AazzTech
+                li.product_cat
+                  a href="#"
+                    span.lnr.lnr-book
+                    | WordPress
+              p
+                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+                | leo quam aliquet congue.
+            /! end /.product-desc
+            .product-purchase
+              .price_love
+                span Free
                 p
-                  | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                  | leo quam aliquet congue.
-              /! end /.product-desc
-              .product-purchase
-                .price_love
-                  span $10
-                  p
-                    span.lnr.lnr-heart
-                    | 48
-                .sell
-                  p
-                    span.lnr.lnr-cart
-                    span 50
-              /! end /.product-purchase
-            /! end /.single-product
-            /! start .single-product
-            .product.product--card
-              .product__thumbnail
-                = image_tag 'p6.jpg', alt: 'Product Image'
-                .prod_btn
-                  a.transparent.btn--sm.btn--round href="single-product.html"  More Info
-                  a.transparent.btn--sm.btn--round href="single-product.html"  Live Demo
-                /! end /.prod_btn
-              /! end /.product__thumbnail
-              .product-desc
-                a.product_title href="#"
-                h4 Visibility Manager Subscriptions
-                ul.titlebtm
-                  li
-                    = image_tag "auth3.jpg", :class=>"auth-img"
-                    p
-                      a href="#"  AazzTech
-                  li.product_cat
-                    a href="#"
-                      span.lnr.lnr-book
-                      | WordPress
+                  span.lnr.lnr-heart
+                  | 24
+              .sell
                 p
-                  | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                  | leo quam aliquet congue.
-              /! end /.product-desc
-              .product-purchase
-                .price_love
-                  span Free
-                  p
-                    span.lnr.lnr-heart
-                    | 24
-                .sell
-                  p
-                    span.lnr.lnr-cart
-                    span 27
-              /! end /.product-purchase
-            /! end /.single-product
-      /! end /.row
-    /! start /.container
-  /!
-    | \================================
-    | END FOLLOWERS FEED AREA
-    | \=================================
-  /!
-    | \================================
-    | START COUNTER UP AREA
-    | \=================================
-  section.counter-up-area.bgimage
-    .bg_image_holder
-      = image_tag 'countbg.jpg', alt: ''
-    /! start .container
-    .container.content_above
+                  span.lnr.lnr-cart
+                  span 27
+            /! end /.product-purchase
+          /! end /.single-product
+    /! end /.row
+  /! start /.container
+/!
+  | \================================
+  | END FOLLOWERS FEED AREA
+  | \=================================
+/!
+  | \================================
+  | START COUNTER UP AREA
+  | \=================================
+section.counter-up-area.bgimage
+  .bg_image_holder
+    = image_tag 'countbg.jpg', alt: ''
+  /! start .container
+  .container.content_above
+    /! start .col-md-12
+    .col-md-12
+      .counter-up
+        .counter.mcolor2
+          span.lnr.lnr-briefcase
+          span.count 38,436
+          p items for sale
+        .counter.mcolor3
+          span.lnr.lnr-cloud-download
+          span.count 38,436
+          p total Sales
+        .counter.mcolor1
+          span.lnr.lnr-smile
+          span.count 38,436
+          p appy customers
+        .counter.mcolor4
+          span.lnr.lnr-users
+          span.count 38,436
+          p members
+    /! end /.col-md-12
+  /! end /.container
+/!
+  | \================================
+  | END COUNTER UP AREA
+  | \=================================
+section.why_choose.section--padding
+  /! start container
+  .container
+    /! start row
+    .row
+      /! start col-md-12
+      .col-md-12
+        .section-title
+          h1
+            | Why Choose
+            span.highlighted MartPlace
+          p
+            | Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid
+            | est laborum dolo rumes fugats untras.
+      /! end /.col-md-12
+    /! end /.row
+    /! start row
+    .row
+      /! start .col-md-4
+      .col-lg-4.col-md-6
+        /! start .reason
+        .feature2
+          span.feature2__count 01
+          .feature2__content
+            span.lnr.lnr-license.pcolor
+            h3.feature2-title One Time Payment
+            p
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              | leo quam aliquet diam congue is laoreet elit metus.
+          /! end /.feature2__content
+        /! end /.feature2
+      /! end /.col-md-4
+      /! start .col-md-4
+      .col-lg-4.col-md-6
+        /! start .feature2
+        .feature2
+          span.feature2__count 02
+          .feature2__content
+            span.lnr.lnr-magic-wand.scolor
+            h3.feature2-title Quality Products
+            p
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              | leo quam aliquet diam congue is laoreet elit metus.
+          /! end /.feature2__content
+        /! end /.feature2
+      /! end /.col-md-4
+      /! start .col-md-4
+      .col-lg-4.col-md-6
+        /! start .feature2
+        .feature2
+          span.feature2__count 03
+          .feature2__content
+            span.lnr.lnr-lock.mcolor1
+            h3.feature2-title 100% Secure Paymentt
+            p
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              | leo quam aliquet diam congue is laoreet elit metus.
+          /! end /.feature2__content
+        /! end /.feature2
+      /! end /.col-md-4
+      /! start .col-md-4
+      .col-lg-4.col-md-6
+        /! start .feature2
+        .feature2
+          span.feature2__count 04
+          .feature2__content
+            span.lnr.lnr-chart-bars.mcolor2
+            h3.feature2-title Well Organized Code
+            p
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              | leo quam aliquet diam congue is laoreet elit metus.
+          /! end /.feature2__content
+        /! end /.feature2
+      /! end /.col-md-4
+      /! start .col-md-4
+      .col-lg-4.col-md-6
+        /! start .feature2
+        .feature2
+          span.feature2__count 05
+          .feature2__content
+            span.lnr.lnr-leaf.mcolor3
+            h3.feature2-title Life Time Free Update
+            p
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              | leo quam aliquet diam congue is laoreet elit metus.
+          /! end /.feature2__content
+        /! end /.feature2
+      /! end /.col-md-4
+      /! start .col-md-4
+      .col-lg-4.col-md-6
+        /! start .feature2
+        .feature2
+          span.feature2__count 06
+          .feature2__content
+            span.lnr.lnr-phone.mcolor4
+            h3.feature2-title Fast and Friendly Support
+            p
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              | leo quam aliquet diam congue is laoreet elit metus.
+          /! end /.feature2__content
+        /! end /.feature2
+      /! end /.col-md-4
+    /! end /.row
+  /! end /.container
+/!
+  | \================================
+  | END COUNTER UP AREA
+  | \=================================
+/!
+  | \================================
+  | START SELL BUY
+  | \=================================
+section.proposal-area
+  /! start container-fluid
+  .container-fluid
+    .row
+      .col-md-6.no-padding
+        .proposal.proposal--left.bgimage
+          .bg_image_holder
+            = image_tag 'bbg.png', alt: 'prop image'
+          .content_above
+            .proposal__icon
+              = image_tag 'buy.png', alt: 'buy image'
+            .proposal__content
+              h1.text--white Sell Your Products
+              p.text--white
+                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+                | leo quam aliquet diamcongue is laoreet elit metus.
+            a.btn--round.btn.btn--lg.btn--white href="#"  Become an Author
+        /! end /.proposal
+      .col-md-6.no-padding
+        .proposal.proposal--right
+          .bg_image_holder
+            = image_tag 'sbg.png', alt: 'this is magic'
+          .content_above
+            .proposal__icon
+              = image_tag 'sell.png', alt: 'Sell icon'
+            .proposal__content
+              h1.text--white Start Shopping Today
+              p.text--white
+                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+                | leo quam aliquet diamcongue is laoreet elit metus.
+            a.btn--round.btn.btn--lg.btn--white href="#"  Start Shopping
+        /! end /.proposal
+  /! start container-fluid
+/!
+  | \================================
+  | END SELL BUY
+  | \=================================
+/!
+  | \================================
+  | START TESTIMONIAL
+  | \=================================
+section.testimonial-area.section--padding
+  /! start .container
+  .container
+    /! start row
+    .row
+      /! start col-md-12
+      .col-md-12
+        .section-title
+          h1
+            | Our Clients
+            span.highlighted Feedback
+          p
+            | Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid
+            | est laborum dolo rumes fugats untras.
+      /! end /.col-md-12
+    /! end /.row
+    /! start row
+    .row
       /! start .col-md-12
       .col-md-12
-        .counter-up
-          .counter.mcolor2
-            span.lnr.lnr-briefcase
-            span.count 38,436
-            p items for sale
-          .counter.mcolor3
-            span.lnr.lnr-cloud-download
-            span.count 38,436
-            p total Sales
-          .counter.mcolor1
-            span.lnr.lnr-smile
-            span.count 38,436
-            p appy customers
-          .counter.mcolor4
-            span.lnr.lnr-users
-            span.count 38,436
-            p members
+        .testimonial-slider
+          .testimonial
+            .testimonial__about
+              .avatar.v_middle
+                = image_tag 'test1.jpg', alt: 'Testimonial Avatar'
+              .name-designation.v_middle
+                h4.name Tubeda Pagla
+                span.desig Product Designer
+              span.lnr.lnr-bubble.quote-icon
+            .testimonial__text
+              p
+                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+                | leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum
+                | is mollis. Praesent the pharetra, justo ut scelerisque.
+          /! end /.testimonial
+          .testimonial
+            .testimonial__about
+              .avatar.v_middle
+                = image_tag 'test2.jpg', alt: 'Testimonial Avatar'
+              .name-designation.v_middle
+                h4.name Tarashi Hamada
+                span.desig Quality Ninja
+              span.lnr.lnr-bubble.quote-icon
+            .testimonial__text
+              p
+                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+                | leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum
+                | is mollis. Praesent the pharetra, justo ut scelerisque.
+          /! end /.testimonial
+          .testimonial
+            .testimonial__about
+              .avatar.v_middle
+                = image_tag 'test1.jpg', alt: 'Testimonial Avatar'
+              .name-designation.v_middle
+                h4.name Tubeda Pagla
+                span.desig Product Designer
+              span.lnr.lnr-bubble.quote-icon
+            .testimonial__text
+              p
+                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+                | leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum
+                | is mollis. Praesent the pharetra, justo ut scelerisque.
+          /! end /.testimonial
+          .testimonial
+            .testimonial__about
+              .avatar.v_middle
+                = image_tag 'test2.jpg', alt: 'Testimonial Avatar'
+              .name-designation.v_middle
+                h4.name Tarashi Hamada
+                span.desig Quality Ninja
+              span.lnr.lnr-bubble.quote-icon
+            .testimonial__text
+              p
+                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+                | leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum
+                | is mollis. Praesent the pharetra, justo ut scelerisque.
+          /! end /.testimonial
+        /! end /.testimonial_slider
+        .all-testimonial
+          a.btn.btn--lg.btn--round href="testimonial.html"  View All Reviews
       /! end /.col-md-12
-    /! end /.container
-  /!
-    | \================================
-    | END COUNTER UP AREA
-    | \=================================
-  section.why_choose.section--padding
-    /! start container
-    .container
-      /! start row
-      .row
-        /! start col-md-12
-        .col-md-12
-          .section-title
-            h1
-              | Why Choose
-              span.highlighted MartPlace
+    /! end /.row
+  /! end container
+/!
+  | \================================
+  | END TESTIMONIAL
+  | \=================================
+/!
+  | \================================
+  | START LATEST NEWS
+  | \=================================
+section.latest-news.section--padding
+  /! start /.container
+  .container
+    /! start row
+    .row
+      /! start col-md-12
+      .col-md-12
+        .section-title
+          h1
+            | Latest
+            span.highlighted News
+          p
+            | Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid
+            | est laborum dolo rumes fugats untras.
+      /! end /.col-md-12
+    /! end /.row
+    /! start .row
+    .row
+      /! start .col-md-4
+      .col-lg-4.col-md-6
+        .news
+          .news__thumbnail
+            = image_tag 'news1.png', alt: 'News Thumbnail'
+          .news__content
+            a.news-title href="#"
+            h4 Web Design Trends in 2019
             p
-              | Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid
-              | est laborum dolo rumes fugats untras.
-        /! end /.col-md-12
-      /! end /.row
-      /! start row
-      .row
-        /! start .col-md-4
-        .col-lg-4.col-md-6
-          /! start .reason
-          .feature2
-            span.feature2__count 01
-            .feature2__content
-              span.lnr.lnr-license.pcolor
-              h3.feature2-title One Time Payment
-              p
-                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                | leo quam aliquet diam congue is laoreet elit metus.
-            /! end /.feature2__content
-          /! end /.feature2
-        /! end /.col-md-4
-        /! start .col-md-4
-        .col-lg-4.col-md-6
-          /! start .feature2
-          .feature2
-            span.feature2__count 02
-            .feature2__content
-              span.lnr.lnr-magic-wand.scolor
-              h3.feature2-title Quality Products
-              p
-                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                | leo quam aliquet diam congue is laoreet elit metus.
-            /! end /.feature2__content
-          /! end /.feature2
-        /! end /.col-md-4
-        /! start .col-md-4
-        .col-lg-4.col-md-6
-          /! start .feature2
-          .feature2
-            span.feature2__count 03
-            .feature2__content
-              span.lnr.lnr-lock.mcolor1
-              h3.feature2-title 100% Secure Paymentt
-              p
-                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                | leo quam aliquet diam congue is laoreet elit metus.
-            /! end /.feature2__content
-          /! end /.feature2
-        /! end /.col-md-4
-        /! start .col-md-4
-        .col-lg-4.col-md-6
-          /! start .feature2
-          .feature2
-            span.feature2__count 04
-            .feature2__content
-              span.lnr.lnr-chart-bars.mcolor2
-              h3.feature2-title Well Organized Code
-              p
-                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                | leo quam aliquet diam congue is laoreet elit metus.
-            /! end /.feature2__content
-          /! end /.feature2
-        /! end /.col-md-4
-        /! start .col-md-4
-        .col-lg-4.col-md-6
-          /! start .feature2
-          .feature2
-            span.feature2__count 05
-            .feature2__content
-              span.lnr.lnr-leaf.mcolor3
-              h3.feature2-title Life Time Free Update
-              p
-                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                | leo quam aliquet diam congue is laoreet elit metus.
-            /! end /.feature2__content
-          /! end /.feature2
-        /! end /.col-md-4
-        /! start .col-md-4
-        .col-lg-4.col-md-6
-          /! start .feature2
-          .feature2
-            span.feature2__count 06
-            .feature2__content
-              span.lnr.lnr-phone.mcolor4
-              h3.feature2-title Fast and Friendly Support
-              p
-                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                | leo quam aliquet diam congue is laoreet elit metus.
-            /! end /.feature2__content
-          /! end /.feature2
-        /! end /.col-md-4
-      /! end /.row
-    /! end /.container
-  /!
-    | \================================
-    | END COUNTER UP AREA
-    | \=================================
-  /!
-    | \================================
-    | START SELL BUY
-    | \=================================
-  section.proposal-area
-    /! start container-fluid
-    .container-fluid
-      .row
-        .col-md-6.no-padding
-          .proposal.proposal--left.bgimage
-            .bg_image_holder
-              = image_tag 'bbg.png', alt: 'prop image'
-            .content_above
-              .proposal__icon
-                = image_tag 'buy.png', alt: 'buy image'
-              .proposal__content
-                h1.text--white Sell Your Products
-                p.text--white
-                  | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                  | leo quam aliquet diamcongue is laoreet elit metus.
-              a.btn--round.btn.btn--lg.btn--white href="#"  Become an Author
-          /! end /.proposal
-        .col-md-6.no-padding
-          .proposal.proposal--right
-            .bg_image_holder
-              = image_tag 'sbg.png', alt: 'this is magic'
-            .content_above
-              .proposal__icon
-                = image_tag 'sell.png', alt: 'Sell icon'
-              .proposal__content
-                h1.text--white Start Shopping Today
-                p.text--white
-                  | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                  | leo quam aliquet diamcongue is laoreet elit metus.
-              a.btn--round.btn.btn--lg.btn--white href="#"  Start Shopping
-          /! end /.proposal
-    /! start container-fluid
-  /!
-    | \================================
-    | END SELL BUY
-    | \=================================
-  /!
-    | \================================
-    | START TESTIMONIAL
-    | \=================================
-  section.testimonial-area.section--padding
-    /! start .container
-    .container
-      /! start row
-      .row
-        /! start col-md-12
-        .col-md-12
-          .section-title
-            h1
-              | Our Clients
-              span.highlighted Feedback
-            p
-              | Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid
-              | est laborum dolo rumes fugats untras.
-        /! end /.col-md-12
-      /! end /.row
-      /! start row
-      .row
-        /! start .col-md-12
-        .col-md-12
-          .testimonial-slider
-            .testimonial
-              .testimonial__about
-                .avatar.v_middle
-                  = image_tag 'test1.jpg', alt: 'Testimonial Avatar'
-                .name-designation.v_middle
-                  h4.name Tubeda Pagla
-                  span.desig Product Designer
-                span.lnr.lnr-bubble.quote-icon
-              .testimonial__text
-                p
-                  | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                  | leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum
-                  | is mollis. Praesent the pharetra, justo ut scelerisque.
-            /! end /.testimonial
-            .testimonial
-              .testimonial__about
-                .avatar.v_middle
-                  = image_tag 'test2.jpg', alt: 'Testimonial Avatar'
-                .name-designation.v_middle
-                  h4.name Tarashi Hamada
-                  span.desig Quality Ninja
-                span.lnr.lnr-bubble.quote-icon
-              .testimonial__text
-                p
-                  | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                  | leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum
-                  | is mollis. Praesent the pharetra, justo ut scelerisque.
-            /! end /.testimonial
-            .testimonial
-              .testimonial__about
-                .avatar.v_middle
-                  = image_tag 'test1.jpg', alt: 'Testimonial Avatar'
-                .name-designation.v_middle
-                  h4.name Tubeda Pagla
-                  span.desig Product Designer
-                span.lnr.lnr-bubble.quote-icon
-              .testimonial__text
-                p
-                  | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                  | leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum
-                  | is mollis. Praesent the pharetra, justo ut scelerisque.
-            /! end /.testimonial
-            .testimonial
-              .testimonial__about
-                .avatar.v_middle
-                  = image_tag 'test2.jpg', alt: 'Testimonial Avatar'
-                .name-designation.v_middle
-                  h4.name Tarashi Hamada
-                  span.desig Quality Ninja
-                span.lnr.lnr-bubble.quote-icon
-              .testimonial__text
-                p
-                  | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                  | leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum
-                  | is mollis. Praesent the pharetra, justo ut scelerisque.
-            /! end /.testimonial
-          /! end /.testimonial_slider
-          .all-testimonial
-            a.btn.btn--lg.btn--round href="testimonial.html"  View All Reviews
-        /! end /.col-md-12
-      /! end /.row
-    /! end container
-  /!
-    | \================================
-    | END TESTIMONIAL
-    | \=================================
-  /!
-    | \================================
-    | START LATEST NEWS
-    | \=================================
-  section.latest-news.section--padding
-    /! start /.container
-    .container
-      /! start row
-      .row
-        /! start col-md-12
-        .col-md-12
-          .section-title
-            h1
-              | Latest
-              span.highlighted News
-            p
-              | Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid
-              | est laborum dolo rumes fugats untras.
-        /! end /.col-md-12
-      /! end /.row
-      /! start .row
-      .row
-        /! start .col-md-4
-        .col-lg-4.col-md-6
-          .news
-            .news__thumbnail
-              = image_tag 'news1.png', alt: 'News Thumbnail'
-            .news__content
-              a.news-title href="#"
-              h4 Web Design Trends in 2019
-              p
-                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                | leo quam aliquet congue.
-            .news__meta
-              .date
-                span.lnr.lnr-clock
-                p 24 Feb 2019
-              .other
-                ul
-                  li
-                    span.lnr.lnr-bubble
-                    span 45
-                  li
-                    span.lnr.lnr-eye
-                    span 345
-        /! end /.col-md-4
-        /! start .col-md-4
-        .col-lg-4.col-md-6
-          .news
-            .news__thumbnail
-              = image_tag 'news2.png', alt: 'News Thumbnail'
-            .news__content
-              a.news-title href="#"
-              h4 The best advices to start your own project
-              p
-                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                | leo quam aliquet congue.
-            .news__meta
-              .date
-                span.lnr.lnr-clock
-                p 15 Mar 2019
-              .other
-                ul
-                  li
-                    span.lnr.lnr-bubble
-                    span 45
-                  li
-                    span.lnr.lnr-eye
-                    span 345
-        /! end /.col-md-4
-        /! start .col-md-4
-        .col-lg-4.col-md-6
-          .news
-            .news__thumbnail
-              = image_tag 'news1.png', alt: 'News Thumbnail'
-            .news__content
-              a.news-title href="#"
-              h4 Best Tomato Sauce in town
-              p
-                | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-                | leo quam aliquet congue.
-            .news__meta
-              .date
-                span.lnr.lnr-clock
-                p 20 Dec 2016
-              .other
-                ul
-                  li
-                    span.lnr.lnr-bubble
-                    span 45
-                  li
-                    span.lnr.lnr-eye
-                    span 345
-        /! end /.col-md-4
-      /! end /.row
-    /! end /.container
-  /!
-    | \================================
-    | END LATEST NEWS
-    | \=================================
-  /!
-    | \================================
-    | START SPECIAL FEATURES AREA
-    | \=================================
-  section.special-feature-area
-    .container
-      .row
-        .col-md-6
-          .special-feature.feature--1
-            = image_tag 'spf1.png', alt: 'Special Feature image'
-            h3.special__feature-title
-              | 30 Days Money Back
-              span.highlight Guarantee
-        /! end /.col-md-6
-        .col-md-6
-          .special-feature.feature--2
-            = image_tag 'spf2.png', alt: 'Special Feature image'
-            h3.special__feature-title
-              | Fast and Friendly
-              span.highlight Support
-        /! end /.col-md-6
-      /! end /.row
-    /! end /.container
-  /!
-    | \================================
-    | END SPECIAL FEATURES AREA
-    | \=================================
-  /!
-    | \================================
-    | START CALL TO ACTION AREA
-    | \=================================
-  section.call-to-action.bgimage
-    .bg_image_holder
-      = image_tag 'calltobg.jpg', alt: ''
-    .container.content_above
-      .row
-        .col-md-12
-          .call-to-wrap
-            h1.text--white Ready to Join Our Marketplace!
-            h4.text--white Over 25,000 designers and developers trust the MartPlace.
-            a.btn.btn--lg.btn--round.btn--white.callto-action-btn href="#"  Join Us Today
-  /!
-    | \================================
-    | END CALL TO ACTION AREA
-    | \=================================
-  /!
-    | \================================
-    | START FOOTER AREA
-    | \=================================
-  footer.footer-area
-    .footer-big.section--padding
-      /! start .container
-      .container
-        .row
-          .col-lg-3.col-md-6
-            .info-footer
-              .info__logo
-                = image_tag 'flogo.png', alt: 'footer logo'
-              p.info--text
-                | Nunc placerat mi id nisi interdum they mollis. Praesent pharetra, justo ut scel erisque the mattis,
-                | leo quam.
-              ul.info-contact
-                li
-                  span.lnr.lnr-phone.info-icon
-                  span.info Phone: +6789-875-2235
-                li
-                  span.lnr.lnr-envelope.info-icon
-                  span.info support@aazztech.com
-                li
-                  span.lnr.lnr-map-marker.info-icon
-                  span.info 202 New Hampshire Avenue Northwest #100, New York-2573
-            /! end /.info-footer
-          /! end /.col-md-3
-          .col-lg-5.col-md-6
-            .footer-menu
-              h4.footer-widget-title.text--white Our Company
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              | leo quam aliquet congue.
+          .news__meta
+            .date
+              span.lnr.lnr-clock
+              p 24 Feb 2019
+            .other
               ul
                 li
-                  a href="#"  How to Join Us
+                  span.lnr.lnr-bubble
+                  span 45
                 li
-                  a href="#"  How It Work
-                li
-                  a href="#"  Buying and Selling
-                li
-                  a href="#"  Testimonials
-                li
-                  a href="#"  Copyright Notice
-                li
-                  a href="#"  Refund Policy
-                li
-                  a href="#"  Affiliates
-            /! end /.footer-menu
-            .footer-menu
-              h4.footer-widget-title.text--white Help and FAQs
+                  span.lnr.lnr-eye
+                  span 345
+      /! end /.col-md-4
+      /! start .col-md-4
+      .col-lg-4.col-md-6
+        .news
+          .news__thumbnail
+            = image_tag 'news2.png', alt: 'News Thumbnail'
+          .news__content
+            a.news-title href="#"
+            h4 The best advices to start your own project
+            p
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              | leo quam aliquet congue.
+          .news__meta
+            .date
+              span.lnr.lnr-clock
+              p 15 Mar 2019
+            .other
               ul
                 li
-                  a href="#"  How to Join Us
+                  span.lnr.lnr-bubble
+                  span 45
                 li
-                  a href="#"  How It Work
+                  span.lnr.lnr-eye
+                  span 345
+      /! end /.col-md-4
+      /! start .col-md-4
+      .col-lg-4.col-md-6
+        .news
+          .news__thumbnail
+            = image_tag 'news1.png', alt: 'News Thumbnail'
+          .news__content
+            a.news-title href="#"
+            h4 Best Tomato Sauce in town
+            p
+              | Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              | leo quam aliquet congue.
+          .news__meta
+            .date
+              span.lnr.lnr-clock
+              p 20 Dec 2016
+            .other
+              ul
                 li
-                  a href="#"  Buying and Selling
+                  span.lnr.lnr-bubble
+                  span 45
                 li
-                  a href="#"  Testimonials
-                li
-                  a href="#"  Copyright Notice
-                li
-                  a href="#"  Refund Policy
-                li
-                  a href="#"  Affiliates
-            /! end /.footer-menu
-          /! end /.col-md-5
-          .col-lg-4.col-md-12
-            .newsletter
-              h4.footer-widget-title.text--white Newsletter
-              p Subscribe to get the latest news, update and offer information. Don't worry, we won't send spam!
-              .newsletter__form
-                form action="#"
-                  .field-wrapper
-                    input.relative-field.rounded placeholder=("Enter email") type="text" /
-                    button.btn.btn--round type="submit"  Submit
-              /! start .social
-              .social.social--color--filled
-                ul
-                  li
-                    a href="#"
-                      span.fa.fa-facebook
-                  li
-                    a href="#"
-                      span.fa.fa-twitter
-                  li
-                    a href="#"
-                      span.fa.fa-google-plus
-                  li
-                    a href="#"
-                      span.fa.fa-pinterest
-                  li
-                    a href="#"
-                      span.fa.fa-linkedin
-                  li
-                    a href="#"
-                      span.fa.fa-dribbble
-              /! end /.social
-            /! end /.newsletter
-          /! end /.col-md-4
-        /! end /.row
-      /! end /.container
-    /! end /.footer-big
-    .mini-footer
-      .container
-        .row
-          .col-md-12
-            .copyright-text
-              p
-                | \&copy; 2019
-                a href="#"  MartPlace
-                | All rights reserved. Created by
-                a href="#"  AazzTech
-            .go_top
-              span.lnr.lnr-chevron-up
-  /!
-    | \================================
-    | END FOOTER AREA
-    | \=================================
-  /! //////////////////// JS GOES HERE ////////////////
-  / script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0C5etf1GVmL_ldVAichWwFFVcDfa1y_c"
-  / /! inject:js
-  / script src="js/vendor/jquery/jquery-1.12.3.js"
-  / script src="js/vendor/jquery/popper.min.js"
-  / script src="js/vendor/jquery/uikit.min.js"
-  / script src="js/vendor/bootstrap.min.js"
-  / script src="js/vendor/chart.bundle.min.js"
-  / script src="js/vendor/grid.min.js"
-  / script src="js/vendor/jquery-ui.min.js"
-  / script src="js/vendor/jquery.barrating.min.js"
-  / script src="js/vendor/jquery.countdown.min.js"
-  / script src="js/vendor/jquery.counterup.min.js"
-  / script src="js/vendor/jquery.easing1.3.js"
-  / script src="js/vendor/owl.carousel.min.js"
-  / script src="js/vendor/slick.min.js"
-  / script src="js/vendor/tether.min.js"
-  / script src="js/vendor/trumbowyg.min.js"
-  / script src="js/vendor/waypoints.min.js"
-  / script src="js/dashboard.js"
-  / script src="js/main.js"
-  / script src="js/map.js"
-  / /! endinject
+                  span.lnr.lnr-eye
+                  span 345
+      /! end /.col-md-4
+    /! end /.row
+  /! end /.container
+/!
+  | \================================
+  | END LATEST NEWS
+  | \=================================
+/!
+  | \================================
+  | START SPECIAL FEATURES AREA
+  | \=================================
+section.special-feature-area
+  .container
+    .row
+      .col-md-6
+        .special-feature.feature--1
+          = image_tag 'spf1.png', alt: 'Special Feature image'
+          h3.special__feature-title
+            | 30 Days Money Back
+            span.highlight Guarantee
+      /! end /.col-md-6
+      .col-md-6
+        .special-feature.feature--2
+          = image_tag 'spf2.png', alt: 'Special Feature image'
+          h3.special__feature-title
+            | Fast and Friendly
+            span.highlight Support
+      /! end /.col-md-6
+    /! end /.row
+  /! end /.container
+/!
+  | \================================
+  | END SPECIAL FEATURES AREA
+  | \=================================
+/!
+  | \================================
+  | START CALL TO ACTION AREA
+  | \=================================
+section.call-to-action.bgimage
+  .bg_image_holder
+    = image_tag 'calltobg.jpg', alt: ''
+  .container.content_above
+    .row
+      .col-md-12
+        .call-to-wrap
+          h1.text--white Ready to Join Our Marketplace!
+          h4.text--white Over 25,000 designers and developers trust the MartPlace.
+          a.btn.btn--lg.btn--round.btn--white.callto-action-btn href="#"  Join Us Today
+/!
+  | \================================
+  | END CALL TO ACTION AREA
+  | \=================================
+
+/! //////////////////// JS GOES HERE ////////////////
+/ script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0C5etf1GVmL_ldVAichWwFFVcDfa1y_c"
+/ /! inject:js
+/ script src="js/vendor/jquery/jquery-1.12.3.js"
+/ script src="js/vendor/jquery/popper.min.js"
+/ script src="js/vendor/jquery/uikit.min.js"
+/ script src="js/vendor/bootstrap.min.js"
+/ script src="js/vendor/chart.bundle.min.js"
+/ script src="js/vendor/grid.min.js"
+/ script src="js/vendor/jquery-ui.min.js"
+/ script src="js/vendor/jquery.barrating.min.js"
+/ script src="js/vendor/jquery.countdown.min.js"
+/ script src="js/vendor/jquery.counterup.min.js"
+/ script src="js/vendor/jquery.easing1.3.js"
+/ script src="js/vendor/owl.carousel.min.js"
+/ script src="js/vendor/slick.min.js"
+/ script src="js/vendor/tether.min.js"
+/ script src="js/vendor/trumbowyg.min.js"
+/ script src="js/vendor/waypoints.min.js"
+/ script src="js/dashboard.js"
+/ script src="js/main.js"
+/ script src="js/map.js"
+/ /! endinject
